@@ -1,7 +1,6 @@
 package com.example.adsimpl.other_utils
 
 import android.content.SharedPreferences
-import android.net.Uri
 import android.os.Build
 import androidx.annotation.ChecksSdkIntAtLeast
 
@@ -9,7 +8,8 @@ var lastClickTime: Long = 0
 var mSharedPref: SharedPreferences? = null
 const val AD_RELOAD_DURATION = 20000L
 
- val GENERIC_PERM_HANDLER = 100
+val GENERIC_PERM_HANDLER = 100
+
 // permissions
 const val PERMISSION_READ_STORAGE = 1
 const val PERMISSION_WRITE_STORAGE = 2
@@ -26,9 +26,6 @@ const val PERMISSION_GET_ACCOUNTS = 12
 const val PERMISSION_READ_SMS = 13
 const val PERMISSION_SEND_SMS = 14
 const val PERMISSION_READ_PHONE_STATE = 15
-private const val AUTHORITY = "com.funsol.commons.contactsprovider"
-val CONTACTS_CONTENT_URI = Uri.parse("content://$AUTHORITY/contacts")
-
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
 
 

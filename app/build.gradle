@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.adsimpl'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.adsimpl"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = 'true'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            resValue "string", "app_interstitial_id", "ca-app-pub-3940256099942544/1033173712"
+            resValue "string", "app_open_id", "ca-app-pub-3940256099942544/3419835294"
+            resValue "string", "admob_native", "ca-app-pub-3940256099942544/1044960115"
+            resValue "string", "admob_bqnner", "ca-app-pub-3940256099942544/1044960115"
+            resValue "string", "admob_native_ad_id_imageediting", "ca-app-pub-3940256099942544/1044960115"
+            resValue "string", "admob_native_ad_id_splash", "ca-app-pub-3940256099942544/1044960115"
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            resValue "string", "app_interstitial_id", "ca-app-pub-3940256099942544/1033173712"
+            resValue "string", "app_open_id", "ca-app-pub-3940256099942544/3419835294"
+            resValue "string", "admob_native", "ca-app-pub-3940256099942544/1044960115"
+            resValue "string", "admob_bqnner", "ca-app-pub-3940256099942544/1044960115"
+            resValue "string", "admob_native_ad_id_imageediting", "ca-app-pub-3940256099942544/1044960115"
+            resValue "string", "admob_native_ad_id_splash", "ca-app-pub-3940256099942544/1044960115"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.6.1"
+
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.android.gms:play-services-ads-lite:22.1.0'
+    // Declare the dependency for the Analytics library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+}

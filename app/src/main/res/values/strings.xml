@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ads Impl</string>
+    <string name="no_app_found">No App Found</string>
+    <string name="ok">OK</string>
+    <string name="permission_granted">permission granted</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_detail">Required permission(s) have been set not to ask again! Please provide them from settings</string>
+    <string name="yay_mind_giving_us_a_five_star_rating_on_play_store">Yay! Mind giving us a Five Star rating on Play Store?</string>
+    <string name="ad">AD</string>
+    <string name="open">Open</string>
+</resources>
